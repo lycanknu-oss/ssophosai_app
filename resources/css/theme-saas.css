@@ -1,0 +1,177 @@
+:root {
+    /* Primary Gradient Colors */
+    --primary-deep-purple: #3126C9;
+    --primary-purple-light: #675CF0;
+    --primary-blue: #1675E8;
+
+    /* Secondary Colors */
+    --secondary-green: #13A678;
+    --secondary-orange: #F49A22;
+
+    /* Status Indicators */
+    --status-success: #16A34A;
+    --status-warning: #F59E0B;
+    --status-danger: #EF4444;
+    --status-info: #3B82F6;
+
+    /* Backgrounds & Surfaces */
+    --bg-main: #F5F6FA;
+    --bg-card: #FFFFFF;
+    --bg-surface-light: #F8FAFC;
+
+    /* Typography & Borders */
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --border-color: #E8ECF4;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #3126C9 0%, #1675E8 100%);
+    --gradient-success: linear-gradient(135deg, #13A678 0%, #10B981 100%);
+    --gradient-header: linear-gradient(135deg, #3126C9 0%, #1675E8 50%, #3126C9 100%);
+}
+
+body {
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Prompt', sans-serif;
+}
+
+/* Vector Background Pattern */
+.bg-vector-pattern {
+    background-color: var(--bg-main);
+    background-image: radial-gradient(#CBD5E1 0.85px, transparent 0.85px);
+    background-size: 22px 22px;
+}
+
+/* Shadows */
+.saas-shadow {
+    box-shadow: 0 4px 20px -2px rgba(30, 41, 59, 0.05), 0 2px 6px -1px rgba(30, 41, 59, 0.03);
+}
+
+.saas-shadow-lg {
+    box-shadow: 0 10px 30px -5px rgba(49, 38, 201, 0.22);
+}
+
+.saas-shadow-glow {
+    box-shadow: 0 6px 18px -3px rgba(49, 38, 201, 0.35);
+}
+
+/* Cards */
+.saas-card {
+    background-color: var(--bg-card);
+    border-radius: 18px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px -2px rgba(30, 41, 59, 0.05);
+}
+
+/* Primary Gradient Button */
+.btn-saas-primary {
+    background: var(--gradient-primary);
+    color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px -3px rgba(49, 38, 201, 0.35);
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-saas-primary:hover {
+    opacity: 0.94;
+    transform: translateY(-1px);
+}
+
+/* Form Input */
+.saas-input {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 0.625rem 0.875rem;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.saas-input:focus {
+    border-color: var(--primary-purple-light);
+    box-shadow: 0 0 0 3px rgba(103, 92, 240, 0.14);
+}mkdir
+/* บังคับให้ Input/Select/Textarea ขยายเต็มความกว้างคอลัมน์และไม่ถูกบีบ */
+.saas-input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #E8ECF4;
+    border-radius: 12px;
+    padding: 0.625rem 0.875rem;
+    color: #1E293B;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    transition: all 0.2s ease;
+}
+
+.saas-input:focus {
+    outline: none;
+    border-color: #675CF0;
+    box-shadow: 0 0 0 3px rgba(103, 92, 240, 0.14);
+}
+
+/* กล่องอัปโหลดไฟล์แบบ Dropzone */
+.saas-file-box {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    background-color: #F8FAFC;
+    border: 1.5px dashed #CBD5E1;
+    border-radius: 14px;
+    padding: 0.75rem 1rem;
+    transition: all 0.2s ease;
+}
+
+.saas-file-box:hover {
+    background-color: #EEF2FF;
+    border-color: #675CF0;
+}
+
+/* กล่องแจ้งเตือนกรณีไม่มีข้อมูล (Empty State) */
+.saas-empty-state {
+    background-color: #FFFFFF;
+    border: 1.5px dashed #CBD5E1;
+    border-radius: 20px;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: #64748B;
+}
+/* บังคับให้ Input, Select, Textarea ขยายเต็มพื้นที่ 100% เสมอ */
+input.saas-input,
+select.saas-input,
+textarea.saas-input,
+.saas-input {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    background-color: #FFFFFF;
+    border: 1px solid #E8ECF4;
+    border-radius: 12px;
+    padding: 0.65rem 0.9rem;
+    color: #1E293B;
+    font-family: 'IBM Plex Sans Thai', sans-serif;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input.saas-input:focus,
+select.saas-input:focus,
+textarea.saas-input:focus,
+.saas-input:focus {
+    outline: none !important;
+    border-color: #675CF0 !important;
+    box-shadow: 0 0 0 3px rgba(103, 92, 240, 0.14) !important;
+}

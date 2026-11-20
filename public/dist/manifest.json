@@ -1,0 +1,26 @@
+{
+  "resources/css/app.css": {
+    "file": "css/app.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/theme-saas.css": {
+    "file": "css/theme-saas.css",
+    "name": "theme-saas",
+    "names": [
+      "theme-saas.css"
+    ],
+    "src": "resources/css/theme-saas.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "js/app2.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@source "../views/**/*.blade.php";
+@source "../js/**/*.js";
+
+:root {
+    --phs-forest: #124e49;
+    --phs-deep: #0d3937;
+    --phs-teal: #168d83;
+    --phs-active: #267a70;
+    --phs-mint: #e8f5f1;
+    --phs-pale: #f5faf8;
+    --phs-ink: #173a39;
+    --phs-muted: #68817d;
+    --phs-line: #dcebe7;
+    --phs-focus: #f5ae49;
+    --phs-shadow: 0 14px 35px rgba(19, 70, 65, 0.08);
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background-color: var(--phs-pale);
+        color: var(--phs-ink);
+        font-family: 'Prompt', sans-serif;
+        font-size: 14px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible {
+        outline: 3px solid var(--phs-focus);
+        outline-offset: 3px;
+    }
+}
+
+/* Container มาตรฐานกว้างสูงสุด 1180px */
+.phs-container {
+    width: min(1180px, calc(100% - 36px));
+    margin-inline: auto;
+}
+
+/* การ์ดมาตรฐานตามภาพ */
+.phs-card {
+    background-color: #ffffff;
+    border: 1px solid var(--phs-line);
+    border-radius: 16px;
+    box-shadow: var(--phs-shadow);
+}
+
+/* ป้ายกำกับสีเขียวมิ้นต์ */
+.phs-pill {
+    display: inline-block;
+    background-color: var(--phs-mint);
+    color: var(--phs-teal);
+    border-radius: 9999px;
+    padding: 3px 10px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+/* ซ่อนลูกศรเริ่มต้นของ details/summary */
+.nav-dropdown summary::-webkit-details-marker {
+    display: none;
+}
